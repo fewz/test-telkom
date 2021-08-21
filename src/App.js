@@ -10,7 +10,8 @@ class App extends Component {
   state = {
     user: "",
     repos: [],
-    loading: true
+    loading: true,
+    value: "fewz"
   }
 
   componentDidMount() {
@@ -33,8 +34,10 @@ class App extends Component {
 
     let val = "";
     let timer;
+
     const HandlerOnChange = (e) => {
       val = e.target.value;
+      this.setState({ value: e.target.value });
       clearTimeout(timer);
       timer = setTimeout(() => {
         if (val == e.target.value && val != "") {
@@ -66,7 +69,8 @@ class App extends Component {
       return (
         <div className="App">
           <div className="Search">
-            <input type="text" placeholder="Search Username..." onChange={(e) => HandlerOnChange(e)}></input>
+            <h5>Search username</h5>
+            <input type="text" placeholder="Search Username..." value={this.state.value} onChange={(e) => HandlerOnChange(e)}></input>
           </div>
           <div className="Profile">
             <h1>Detail Profile</h1>
@@ -94,7 +98,8 @@ class App extends Component {
         return (
           <div className="App">
             <div className="Search">
-              <input type="text" placeholder="Search Username..." onChange={(e) => HandlerOnChange(e)}></input>
+              <h5>Search username</h5>
+              <input type="text" placeholder="Search Username..." value={this.state.value} onChange={(e) => HandlerOnChange(e)}></input>
             </div>
             <h1>Loading</h1>
           </div>
@@ -104,6 +109,7 @@ class App extends Component {
         return (
           <div className="App">
             <div className="Search">
+              <h5>Search username</h5>
               <input type="text" placeholder="Search Username..." onChange={(e) => HandlerOnChange(e)}></input>
             </div>
             <h1>User not exists</h1>
