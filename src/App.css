@@ -1,38 +1,51 @@
-.App {
+.Search {
+  max-width: 1020px;
+  margin: 25px auto;
+}
+
+.Search input[type="text"] {
+  width: 100%;
+  padding: 15px;
+}
+
+.Profile {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Profile img {
+  border-radius: 150px;
+  width: 150px;
+  height: 150px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Profile h1 {
+  color: teal;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Profile h5, h3, h4 {
+  margin: 5px 0px;
+}
+
+.Profile h5 {
+  color: gray;
+  font-size: 18px;
+}
+
+.Profile h4 {
+  font-size: 20px;
+}
+
+.Profile h3 {
+  font-size: 28px;
+}
+
+.RepoList {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1{
+  text-align: center;
 }
